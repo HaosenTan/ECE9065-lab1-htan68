@@ -6,77 +6,213 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+<link rel="stylesheet" type="text/css" href="static/style.css">
 <body>
 <ul>
     <li class="pic">
-        <img src="static/1.png" alt="picture">
+        <img src="static/img/1.png" alt="picture">
         <div class="description">
             <p class="num">01</p>
             <p class="name">Bulbasaur</p>
-            <div class="pic-type" >Grass</div>
+            <div id="pic-father">
+                <div class="pic-type1" >Grass</div>
+                <div class="pic-type2" >Poison</div>
+            </div>
+            <div class="Evo-Stage">Evolution Stage:1</div>
+        </div>
+    </li>
+    <li class="pic">
+        <img src="static/img/2.png" alt="picture">
+        <div class="description">
+            <p class="num">02</p>
+            <p class="name">Ivysaur</p>
+            <div class="typeall">
+                <span class="pic-type1" >Grass</span>
+                <span class="pic-type2" >Poison</span>
+            </div>
+            <div class="Evo-Stage">Evolution Stage:2</div>
+        </div>
+    </li>
+    <li class="pic">
+        <img src="static/img/3.png" alt="picture">
+        <div class="description">
+            <p class="num">03</p>
+            <p class="name">Venusaur</p>
+            <div class="pic-type1" >Grass</div>
+            <div class="pic-type2" >Poison</div>
+            <div class="Evo-Stage">Evolution Stage:3</div>
+        </div>
+    </li>
+    <li class="pic">
+        <img src="static/img/4.png" alt="picture">
+        <div class="description">
+            <p class="num">04</p>
+            <p class="name">Charmander</p>
+            <div class="pic-type1" >Fire</div>
+            <div class="pic-type2" ></div>
+            <div class="Evo-Stage">Evolution Stage:1</div>
+        </div>
+    </li>
+    <li class="pic">
+        <img src="static/img/5.png" alt="picture">
+        <div class="description">
+            <p class="num">05</p>
+            <p class="name">Charmeleon</p>
+            <div class="pic-type1" >Fire</div>
+            <div class="pic-type2" ></div>
+            <div class="Evo-Stage">Evolution Stage:2</div>
+        </div>
+    </li>
+    <li class="pic">
+        <img src="static/img/6.png" alt="picture">
+        <div class="description">
+            <p class="num">06</p>
+            <p class="name">Charizard</p>
+            <div class="pic-type1" >Fire</div>
+            <div class="pic-type2" >Flying</div>
+            <div class="Evo-Stage">Evolution Stage:3</div>
+        </div>
+    </li>
+    <li class="pic">
+        <img src="static/img/7.png" alt="picture">
+        <div class="description">
+            <p class="num">07</p>
+            <p class="name">Squirtle</p>
+            <div class="pic-type1" >Water</div>
+            <div class="pic-type2" ></div>
+            <div class="Evo-Stage">Evolution Stage:1</div>
+        </div>
+    </li>
+    <li class="pic">
+        <img src="static/img/8.png" alt="picture">
+        <div class="description">
+            <p class="num">08</p>
+            <p class="name">Wartortle</p>
+            <div class="pic-type1" >Water</div>
+            <div class="pic-type2" ></div>
+            <div class="Evo-Stage">Evolution Stage:2</div>
+        </div>
+    <!-- </li>
+    <li class="pic">
+        <img src="static/img/9.png" alt="picture">
+        <div class="description">
+            <p class="num">09</p>
+            <p class="name">Blastoise</p>
+            <div class="pic-type1" >Water</div>
+            <div class="pic-type2" ></div>
+            <div class="Evo-Stage">Evolution Stage:3</div>
+        </div>
+    </li>
+    <li class="pic">
+        <img src="static/img/10.png" alt="picture">
+        <div class="description">
+            <p class="num">10</p>
+            <p class="name">Caterpie</p>
+            <div class="pic-type" >Bug</div>
+            <div class="pic-type" ></div>
+            <div class="Evo-Stage">Evolution Stage:1</div>
+        </div>
+    </li>
+    <li class="pic">
+        <img src="static/img/11.png" alt="picture">
+        <div class="description">
+            <p class="num">11</p>
+            <p class="name">Metapod</p>
+            <div class="pic-type" >Bug</div>
+            <div class="pic-type" ></div>
+            <div class="Evo-Stage">Evolution Stage:2</div>
+        </div>
+    </li>
+    <li class="pic">
+        <img src="static/img/12.png" alt="picture">
+        <div class="description">
+            <p class="num">12</p>
+            <p class="name">Butterfree</p>
+            <div class="pic-type" >Bug</div>
+            <div class="pic-type" >Flying</div>
+            <div class="Evo-Stage">Evolution Stage:3</div>
+        </div>
+    </li>
+    <li class="pic">
+        <img src="static/img/13.png" alt="picture">
+        <div class="description">
+            <p class="num">13</p>
+            <p class="name">Weedle</p>
+            <div class="pic-type" >Bug</div>
             <div class="pic-type" >Poison</div>
             <div class="Evo-Stage">Evolution Stage:1</div>
         </div>
     </li>
     <li class="pic">
-        <img src="static/2.png" alt="picture">
+        <img src="static/img/14.png" alt="picture">
         <div class="description">
-            <p class="num">01</p>
-            <p class="name">Bulbasaur</p>
-            <div class="pic-type" >Grass</div>
+            <p class="num">14</p>
+            <p class="name">Kakuna</p>
+            <div class="pic-type" >Bug</div>
             <div class="pic-type" >Poison</div>
+            <div class="Evo-Stage">Evolution Stage:2</div>
+        </div>
+    </li>
+    <li class="pic">
+        <img src="static/img/15.png" alt="picture">
+        <div class="description">
+            <p class="num">15</p>
+            <p class="name">Beedrill</p>
+            <div class="pic-type" >Bug</div>
+            <div class="pic-type" >Poison</div>
+            <div class="Evo-Stage">Evolution Stage:3</div>
+        </div>
+    </li>
+    <li class="pic">
+        <img src="static/img/16.png" alt="picture">
+        <div class="description">
+            <p class="num">16</p>
+            <p class="name">Pidgey</p>
+            <div class="pic-type" >Normal</div>
+            <div class="pic-type" >Flying</div>
             <div class="Evo-Stage">Evolution Stage:1</div>
         </div>
     </li>
     <li class="pic">
-        <img src="static/3.png" alt="picture">
+        <img src="static/img/17.png" alt="picture">
         <div class="description">
-            <p class="num">01</p>
-            <p class="name">Bulbasaur</p>
-            <div class="pic-type" >Grass</div>
-            <div class="pic-type" >Poison</div>
+            <p class="num">17</p>
+            <p class="name">Pidgeotto</p>
+            <div class="pic-type" >Normal</div>
+            <div class="pic-type" >Flying</div>
+            <div class="Evo-Stage">Evolution Stage:2</div>
+        </div>
+    </li>
+    <li class="pic">
+        <img src="static/img/18.png" alt="picture">
+        <div class="description">
+            <p class="num">18</p>
+            <p class="name">Pidgeot</p>
+            <div class="pic-type" >Normal</div>
+            <div class="pic-type" >Flying</div>
+            <div class="Evo-Stage">Evolution Stage:3</div>
+        </div>
+    </li>
+    <li class="pic">
+        <img src="static/img/19.png" alt="picture">
+        <div class="description">
+            <p class="num">19</p>
+            <p class="name">Rattata</p>
+            <div class="pic-type" >Normal</div>
+            <div class="pic-type" ></div>
             <div class="Evo-Stage">Evolution Stage:1</div>
         </div>
     </li>
     <li class="pic">
-        <img src="static/4git.png" alt="picture">
+        <img src="static/img/20.png" alt="picture">
         <div class="description">
-            <p class="num">01</p>
-            <p class="name">Bulbasaur</p>
-            <div class="pic-type" >Grass</div>
-            <div class="pic-type" >Poison</div>
-            <div class="Evo-Stage">Evolution Stage:1</div>
+            <p class="num">20</p>
+            <p class="name">Raticate</p>
+            <div class="pic-type" >Normal</div>
+            <div class="pic-type" ></div>
+            <div class="Evo-Stage">Evolution Stage:2</div>
         </div>
-    </li>
-    <li class="pic">
-        <img src="static/1.png" alt="picture">
-        <div class="description">
-            <p class="num">01</p>
-            <p class="name">Bulbasaur</p>
-            <div class="pic-type" >Grass</div>
-            <div class="pic-type" >Poison</div>
-            <div class="Evo-Stage">Evolution Stage:1</div>
-        </div>
-    </li>
-    <li class="pic">
-        <img src="static/1.png" alt="picture">
-        <div class="description">
-            <p class="num">01</p>
-            <p class="name">Bulbasaur</p>
-            <div class="pic-type" >Grass</div>
-            <div class="pic-type" >Poison</div>
-            <div class="Evo-Stage">Evolution Stage:1</div>
-        </div>
-    </li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
+    </li> -->
 </ul>
 </body>
 </html>
