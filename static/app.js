@@ -93,7 +93,7 @@ function validTextInput(inputText) {
     if(reg.test(inputText)){
         return true;
     }else{
-        alert("error");
+        alert("Please enter letters and the length should not exceed 20");
         return false;
 
     }
