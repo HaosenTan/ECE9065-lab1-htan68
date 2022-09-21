@@ -9,10 +9,18 @@ const Parry = [
 const textSearchBtn = document.getElementById("text-search-btn");
 textSearchBtn.addEventListener("click", textSearchClickListener);
 const numberSearchBtn = document.getElementById("number-search-btn");
+numberSearchBtn.addEventListener("click", numberSearchClickListener);
 
 function validNumberInput(inputNumber) {
     // TODO: validate user's input number
-    return true;
+    var reg =/^(?:[1-9]|1[0-9]|20)$/;
+    if(reg.test(inputNumber)){
+        return true;
+    }else{
+        alert("error");
+        return false;
+
+    }
 }
 
 function searchByNumber(number, Parry) {
@@ -42,11 +50,9 @@ function numberSearchClickListener() {
     let resultDiv = document.getElementById("number-search-result");
     resultDiv.innerHTML = "";
     for (let i = 0; i < result.length; i++) {
-        resultDiv.innerHTML += "Name: " + result[i].name + " Id: " + result[i].id + result[i].type + result[i].EvolutionStage + "<br>";
+        resultDiv.innerHTML += "Name: " + result[i].name + " Id: " + result[i].id + result[i].type + " Evolution Stage: "+result[i].EvolutionStage + "<br>";
     }
 }
-
-numberSearchBtn.addEventListener("click", numberSearchClickListener);
 
 function searchByText(text, Parry) {
     let result = [];
@@ -58,12 +64,38 @@ function searchByText(text, Parry) {
     return result;
 }
 
+function textSearchClickListener() {
+    let text = document.getElementById("text-input").value;
 
+    // validate user's input
+    // user should input: only A-Z, a-z, no more 20 chars
+    if (!validTextInput(text)) {
+        return;
+    }
+
+    // search for the text in the array
+    let result = searchByText(text, Parry);
+
+    // display searching result
+    let resultDiv = document.getElementById("text-search-result");
+    resultDiv.innerHTML = "";
+    for (let i = 0; i < result.length; i++) {
+        resultDiv.innerHTML += "Name: " + result[i].name + " Id: " + result[i].id + result[i].type + " Evolution Stage: "+result[i].EvolutionStage + "<br>";
+    }
+}
 
 function validTextInput(inputText) {
+
     if (inputText === "") {
-        alert("");
+        alert("Input cannot be empty");
         return false;
+    }
+    if(reg.test(inputText)){
+        return true;
+    }else{
+        alert("error");
+        return false;
+
     }
     return true;
 }
