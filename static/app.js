@@ -17,7 +17,7 @@ function validNumberInput(inputNumber) {
     if(reg.test(inputNumber)){
         return true;
     }else{
-        alert("error");
+        alert("Please enter a number from 1 to 20");
         return false;
 
     }
