@@ -1,8 +1,8 @@
 
-const Parry=[
-    {name:"Bulbasau",id:01,type:"Grass",EvolutionStage:1},
-    {name:"Ivysaur",id:02,type:"Grass",EvolutionStage:2}
-]
+const Parry = [
+    {name: "Bulbasaur", id: 1, type: "Grass", EvolutionStage: 1},
+    {name: "Ivysaur", id: 2, type: "Grass", EvolutionStage: 2}
+];
 
 
 // add event listener
@@ -59,10 +59,12 @@ function searchByText(text, Parry) {
 }
 
 
+
 function validTextInput(inputText) {
     if (inputText === "") {
-        alert("请输入内容");
+        alert("");
         return false;
     }
     return true;
 }
+
