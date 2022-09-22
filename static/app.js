@@ -76,10 +76,14 @@ function numberSearchClickListener() {
 function searchByText(text, Parry) {
     let result = [];
     for (let i = 0; i < 20; i++) {
-        if (Parry[i].name === text) {
+        if(result.length === 5){ //all matches up to 5
+            break;
+        }
+        if (Parry[i].name.startsWith(text)) {
             result.push(Parry[i]);
         }
     }
+
     return result;
 }
 
@@ -99,9 +103,10 @@ function textSearchClickListener() {
     let resultDiv = document.getElementById("text-search-result");
     resultDiv.innerHTML = "";
     for (let i = 0; i < result.length; i++) {
-        resultDiv.innerHTML += "Name: " + result[i].name + "\r\n" + " Id: " + result[i].id + result[i].type + "\r\n"+ " Evolution Stage: "+result[i].EvolutionStage ;
-        alert(resultDiv.innerHTML);
+        resultDiv.innerHTML += "Name: " + result[i].name + "\r\n" + " Id: " + result[i].id + result[i].type + "\r\n"+ " Evolution Stage: "+result[i].EvolutionStage+"\r\n";
+
     }
+    alert(resultDiv.innerHTML);
 }
 
 function validTextInput(inputText) {
