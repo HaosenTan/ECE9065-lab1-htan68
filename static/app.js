@@ -98,7 +98,8 @@ function textSearchClickListener() {
     let resultDiv = document.getElementById("text-search-result");
     resultDiv.innerHTML = "";
     for (let i = 0; i < result.length; i++) {
-        resultDiv.innerHTML += "Name: " + result[i].name + " Id: " + result[i].id + result[i].type + " Evolution Stage: "+result[i].EvolutionStage + "<br>";
+        resultDiv.innerHTML += "Name: " + result[i].name + "\r\n" + " Id: " + result[i].id + result[i].type + "\r\n"+ " Evolution Stage: "+result[i].EvolutionStage ;
+        alert(resultDiv.innerHTML);
     }
 }
 
