@@ -1,25 +1,25 @@
 
 const Parry = [
-    {name: "Bulbasaur", id: 1, type: " Grass	Poison", EvolutionStage: 1},
-    {name: "Ivysaur", id: 2, type: " Grass	Poison", EvolutionStage: 2},
-    {name: "Venusaur", id: 3, type: " Grass	Poison", EvolutionStage: 3},
-    {name: "Charmander", id: 4, type: " Fire", EvolutionStage: 1},
-    {name: "Charmeleon", id: 5, type: " Fire", EvolutionStage: 2},
-    {name: "Charizard", id: 6, type: " Fire	Flying", EvolutionStage: 3},
-    {name: "Squirtle", id: 7, type: " Water", EvolutionStage: 1},
-    {name: "Wartortle", id: 8, type: " Water", EvolutionStage: 2},
-    {name: "Blastoise", id: 9, type: " Water", EvolutionStage: 3},
-    {name: "Caterpie", id: 10, type: " Bug", EvolutionStage: 1},
-    {name: "Metapod", id: 11, type: " Bug", EvolutionStage: 2},
-    {name: "Butterfree", id: 12, type: " Bug Flying", EvolutionStage: 3},
-    {name: "Weedle", id: 13, type: " Bug	Poison", EvolutionStage: 1},
-    {name: "Kakuna", id: 14, type: " Bug	Poison", EvolutionStage: 2},
-    {name: "Beedrill", id: 15, type: " Bug Poison", EvolutionStage: 3},
-    {name: "Pidgey", id: 16, type: " Normal	Flying", EvolutionStage: 1},
-    {name: "Pidgeotto", id: 17, type: " Normal	Flying", EvolutionStage: 2},
-    {name: "Pidgeot", id: 18, type: " Normal	Flying", EvolutionStage: 3},
-    {name: "Rattata", id: 19, type: " Normal", EvolutionStage: 1},
-    {name: "Raticate", id: 20, type: " Normal", EvolutionStage: 2}
+    {name: "Bulbasaur", id: "1", type: " Grass	Poison", EvolutionStage: 1},
+    {name: "Ivysaur", id: "2", type: " Grass	Poison", EvolutionStage: 2},
+    {name: "Venusaur", id: "3", type: " Grass	Poison", EvolutionStage: 3},
+    {name: "Charmander", id: "4", type: " Fire", EvolutionStage: 1},
+    {name: "Charmeleon", id: "5", type: " Fire", EvolutionStage: 2},
+    {name: "Charizard", id: "6", type: " Fire	Flying", EvolutionStage: 3},
+    {name: "Squirtle", id: "7", type: " Water", EvolutionStage: 1},
+    {name: "Wartortle", id: "8", type: " Water", EvolutionStage: 2},
+    {name: "Blastoise", id: "9", type: " Water", EvolutionStage: 3},
+    {name: "Caterpie", id: "10", type: " Bug", EvolutionStage: 1},
+    {name: "Metapod", id: "11", type: " Bug", EvolutionStage: 2},
+    {name: "Butterfree", id: "12", type: " Bug Flying", EvolutionStage: 3},
+    {name: "Weedle", id: "13", type: " Bug	Poison", EvolutionStage: 1},
+    {name: "Kakuna", id: "14", type: " Bug	Poison", EvolutionStage: 2},
+    {name: "Beedrill", id: "15", type: " Bug Poison", EvolutionStage: 3},
+    {name: "Pidgey", id: "16", type: " Normal	Flying", EvolutionStage: 1},
+    {name: "Pidgeotto", id: "17", type: " Normal	Flying", EvolutionStage: 2},
+    {name: "Pidgeot", id: "18", type: " Normal	Flying", EvolutionStage: 3},
+    {name: "Rattata", id: "19", type: " Normal", EvolutionStage: 1},
+    {name: "Raticate", id: "20", type: " Normal", EvolutionStage: 2}
 ];
 
 
@@ -44,9 +44,13 @@ function validNumberInput(inputNumber) {
 function searchByNumber(number, Parry) {
     let result = [];
     for (let i = 0; i < Parry.length; i++) {
-        if (Parry[i].id === number) {
+        if(result.length === 5){ //all matches up to 5
+            break;
+        }
+        if (Parry[i].id.startsWith(number)) {
             result.push(Parry[i]);
         }
+
     }
     return result;
 }
@@ -60,8 +64,8 @@ function numberSearchClickListener() {
     }
 
     // search for the text in the array
-    let num = Number(text);
-    let result = searchByNumber(num, Parry);
+    // let num = String(text);
+    let result = searchByNumber(text, Parry);
     console.log(result);
 
     // display searching result
@@ -69,8 +73,8 @@ function numberSearchClickListener() {
     resultDiv.innerHTML = "";
     for (let i = 0; i < result.length; i++) {
         resultDiv.innerHTML += "Name: " + result[i].name + "\r\n" + " Id: " + result[i].id + result[i].type + "\r\n"+ " Evolution Stage: "+result[i].EvolutionStage ;
-        alert(resultDiv.innerHTML);
     }
+    alert(resultDiv.innerHTML);
 }
 
 function searchByText(text, Parry) {
@@ -110,7 +114,7 @@ function textSearchClickListener() {
 }
 
 function validTextInput(inputText) {
-   var reg =/^[A-Za-z]{1,20}$/;   //[^[A-Za-z]+$]{1,20}/;
+   var reg =/^[A-Za-z]{1,20}$/;
     if (inputText === "") {
         alert("Input cannot be empty");
         return false;
