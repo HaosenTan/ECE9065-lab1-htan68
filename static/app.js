@@ -85,7 +85,7 @@ function textSearchClickListener() {
 }
 
 function validTextInput(inputText) {
-    var reg =/[^[A-Za-z]+$]{1,5}/;
+   var reg =/^[A-Za-z]{1,20}$/;   //[^[A-Za-z]+$]{1,20}/;
     if (inputText === "") {
         alert("Input cannot be empty");
         return false;
