@@ -140,6 +140,31 @@ input,button {
 .search-bar02 button:hover {
     background-color: #834d4f;  /*点击搜索按钮时的背景颜色*/
 }
+#footer {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 15px;
+    line-height: 50px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: rgb(141, 102, 145);
+    color: #fff;
+    letter-spacing: 5px;
+}
+#footer2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: rgb(141, 102, 145);
+    color: #fff;
+    letter-spacing: 5px;
+}
 
 
 
