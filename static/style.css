@@ -76,7 +76,7 @@ ul {
 }
 
 * {
-    box-sizing: border-box;  /*宽度和高度会包括内边距和边框*/
+    box-sizing: border-box;
 }
 
 div.search-bar01 {
@@ -106,7 +106,7 @@ input,button {
 .search-bar01 button {
     height: 40px;
     width: 40px;
-    cursor: pointer;  /*cursor属性定义了鼠标指针放在一个元素边界范围内时所用的光标形状*/
+    cursor: pointer;
     position: absolute;
     background: #e22c32;
     border-radius: 0 20px 20px 0;
@@ -115,7 +115,7 @@ input,button {
 
 }
 .search-bar01 button:hover {
-    background-color: #834d4f;  /*点击搜索按钮时的背景颜色*/
+    background-color: #834d4f;
 }
 .search-bar02 input {
     width: 100%;
@@ -129,7 +129,7 @@ input,button {
 .search-bar02 button {
     height: 40px;
     width: 40px;
-    cursor: pointer;  /*cursor属性定义了鼠标指针放在一个元素边界范围内时所用的光标形状*/
+    cursor: pointer;
     position: absolute;
     background: #e22c32;
     border-radius: 0 20px 20px 0;
@@ -138,7 +138,7 @@ input,button {
 
 }
 .search-bar02 button:hover {
-    background-color: #834d4f;  /*点击搜索按钮时的背景颜色*/
+    background-color: #834d4f;  
 }
 #footer {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
