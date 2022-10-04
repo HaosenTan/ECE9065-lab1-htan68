@@ -51,7 +51,17 @@ function searchByNumber(number, Parry) {
 }
 
 function numberSearchClickListener() {
+    // Clear all new DOM nodes
+    var e = document.getElementById("picAbove");
+    var child = e.lastElementChild;
+    while (child) {
+    e.removeChild(child);
+    child = e.lastElementChild;
+    }
+
     let text = document.getElementById("number-input").value;
+
+
 
     // validate user's input
     if (!validNumberInput(text)) {
@@ -72,23 +82,17 @@ function numberSearchClickListener() {
     // }
 
     // display searching result
-    var e = document.getElementById("picAbove");
-    var child = e.lastElementChild;
-    while (child) {
-    e.removeChild(child);
-    child = e.lastElementChild;
-    }
 
     let numCollection = document.getElementsByClassName("num");
     for(i=0;i<result.length;i++){
         for(j=0;j<numCollection.length;j++){
             if(result[i].id === Number (numCollection[j].textContent)){
-                var pic_Above = document.getElementById("picAbove");
-
-                var divResult = document.createElement("div");
+                 var divResult = document.createElement("div");
+                var liResult = document.createElement("li");
+                liResult.style.listStyle = "none";
                 var searchContent = document.createTextNode("Name: " + result[i].name + "\r\n" + " Id: " + result[i].id + result[i].type + "\r\n"+ " Evolution Stage: "+result[i].EvolutionStage+"\r\n");
-                divResult.appendChild(searchContent);
-
+                liResult.appendChild(searchContent);
+                divResult.appendChild(liResult);
                 pic_Above.appendChild(divResult);
 
                 // let pNode = nameCollection[j].parentNode;
@@ -128,6 +132,7 @@ function searchByText(text, Parry) {
 
 function textSearchClickListener() {
 
+    // Clear all new DOM nodes
     var e = document.getElementById("picAbove");
     var child = e.lastElementChild;
     while (child) {
@@ -172,6 +177,9 @@ function textSearchClickListener() {
                 liResult.appendChild(searchContent);
                 divResult.appendChild(liResult);
                 pic_Above.appendChild(divResult);
+
+                divResult.style.backgroundColor = "background-color: #4158D0";
+                divResult.style.backgroundImage = "linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)";
 
                 // let pNode = nameCollection[j].parentNode;
                 // let cNode = pNode.childNodes;
