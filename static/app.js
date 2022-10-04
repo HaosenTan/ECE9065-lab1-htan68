@@ -124,6 +124,12 @@ function searchByText(text, Parry) {
     return result;
 }
 
+// function strIsNull(str) {
+//     if (str.length == 0) {
+//         console.log('空');
+//     }
+// }
+
 function textSearchClickListener() {
     let text = document.getElementById("text-input").value;
 
@@ -161,9 +167,11 @@ function textSearchClickListener() {
                 var pic_Above = document.getElementById("picAbove");
 
                 var divResult = document.createElement("div");
+                var liResult = document.createElement("li");
+                liResult.style.listStyle = "none";
                 var searchContent = document.createTextNode("Name: " + result[i].name + "\r\n" + " Id: " + result[i].id + result[i].type + "\r\n"+ " Evolution Stage: "+result[i].EvolutionStage+"\r\n");
-                divResult.appendChild(searchContent);
-
+                liResult.appendChild(searchContent);
+                divResult.appendChild(liResult);
                 pic_Above.appendChild(divResult);
 
                 // let pNode = nameCollection[j].parentNode;
