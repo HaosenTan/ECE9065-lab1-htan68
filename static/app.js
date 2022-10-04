@@ -124,13 +124,17 @@ function searchByText(text, Parry) {
     return result;
 }
 
-// function strIsNull(str) {
-//     if (str.length == 0) {
-//         console.log('空');
-//     }
-// }
+
 
 function textSearchClickListener() {
+
+    var e = document.getElementById("picAbove");
+    var child = e.lastElementChild;
+    while (child) {
+    e.removeChild(child);
+    child = e.lastElementChild;
+    }
+
     let text = document.getElementById("text-input").value;
 
     // validate user's input
@@ -153,12 +157,7 @@ function textSearchClickListener() {
     // alert(resultDiv.innerHTML);
 
     // display searching result
-    var e = document.getElementById("picAbove");
-    var child = e.lastElementChild;
-    while (child) {
-    e.removeChild(child);
-    child = e.lastElementChild;
-    }
+
 
     let nameCollection = document.getElementsByClassName("name");
     for(i=0;i<result.length;i++){
