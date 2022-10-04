@@ -64,13 +64,51 @@ function numberSearchClickListener() {
     console.log(result);
 
     // display searching result
-    let resultDiv = document.getElementById("number-search-result");
-    resultDiv.innerHTML = "";
-    for (let i = 0; i < result.length; i++) {
-        resultDiv.innerHTML += "Name: " + result[i].name + "\r\n" + " Id: " + result[i].id + result[i].type + "\r\n"+ " Evolution Stage: "+result[i].EvolutionStage ;
-        alert(resultDiv.innerHTML);
+    // let resultDiv = document.getElementById("number-search-result");
+    // resultDiv.innerHTML = "";
+    // for (let i = 0; i < result.length; i++) {
+    //     resultDiv.innerHTML += "Name: " + result[i].name + "\r\n" + " Id: " + result[i].id + result[i].type + "\r\n"+ " Evolution Stage: "+result[i].EvolutionStage ;
+    //     alert(resultDiv.innerHTML);
+    // }
+
+    // display searching result
+    var e = document.getElementById("picAbove");
+    var child = e.lastElementChild;
+    while (child) {
+    e.removeChild(child);
+    child = e.lastElementChild;
     }
+
+    let numCollection = document.getElementsByClassName("num");
+    for(i=0;i<result.length;i++){
+        for(j=0;j<numCollection.length;j++){
+            if(result[i].id === Number (numCollection[j].textContent)){
+                var pic_Above = document.getElementById("picAbove");
+
+                var divResult = document.createElement("div");
+                var searchContent = document.createTextNode("Name: " + result[i].name + "\r\n" + " Id: " + result[i].id + result[i].type + "\r\n"+ " Evolution Stage: "+result[i].EvolutionStage+"\r\n");
+                divResult.appendChild(searchContent);
+
+                pic_Above.appendChild(divResult);
+
+                // let pNode = nameCollection[j].parentNode;
+                // let cNode = pNode.childNodes;
+                // return cNode;
+
+                // let siblings = [];
+                // for(k=0;k<cNode.length;k++)
+                // {
+                //     siblings[siblings.length] =  cNode[k];
+                // }
+                // return siblings;
+
+            }
+        }
+    }
+
+
 }
+
 
 function searchByText(text, Parry) {
     let result = [];
