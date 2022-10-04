@@ -30,7 +30,6 @@ const numberSearchBtn = document.getElementById("number-search-btn");
 numberSearchBtn.addEventListener("click", numberSearchClickListener);
 
 function validNumberInput(inputNumber) {
-    // TODO: validate user's input number
     var reg =/^(?:[1-9]|1[0-9]|20)$/;
     if(reg.test(inputNumber)){
         return true;
@@ -76,9 +75,9 @@ function numberSearchClickListener() {
 function searchByText(text, Parry) {
     let result = [];
     for (let i = 0; i < 20; i++) {
-        if(result.length === 5){ //all matches up to 5
-            break;
-        }
+        // if(result.length === 5){ //all matches up to 5
+        //     break;
+        // }
         if (Parry[i].name.startsWith(text)) {
             result.push(Parry[i]);
         }
@@ -99,14 +98,52 @@ function textSearchClickListener() {
     // search for the text in the array
     let result = searchByText(text, Parry);
 
-    // display searching result
-    let resultDiv = document.getElementById("text-search-result");
-    resultDiv.innerHTML = "";
-    for (let i = 0; i < result.length; i++) {
-        resultDiv.innerHTML += "Name: " + result[i].name + "\r\n" + " Id: " + result[i].id + result[i].type + "\r\n"+ " Evolution Stage: "+result[i].EvolutionStage+"\r\n";
 
+    // display searching result
+    // let resultDiv = document.getElementById("text-search-result");
+    // resultDiv.innerHTML = "";
+    // for (let i = 0; i < result.length; i++) {
+    //     resultDiv.innerHTML += "Name: " + result[i].name + "\r\n" + " Id: " + result[i].id + result[i].type + "\r\n"+ " Evolution Stage: "+result[i].EvolutionStage+"\r\n";
+
+    // }
+    // alert(resultDiv.innerHTML);
+
+    // display searching result
+    var e = document.getElementById("picAbove");
+    var child = e.lastElementChild;
+    while (child) {
+    e.removeChild(child);
+    child = e.lastElementChild;
     }
-    alert(resultDiv.innerHTML);
+
+    let nameCollection = document.getElementsByClassName("name");
+    for(i=0;i<result.length;i++){
+        for(j=0;j<nameCollection.length;j++){
+            if(result[i].name === nameCollection[j].textContent){
+                var pic_Above = document.getElementById("picAbove");
+
+                var divResult = document.createElement("div");
+                var searchContent = document.createTextNode("Name: " + result[i].name + "\r\n" + " Id: " + result[i].id + result[i].type + "\r\n"+ " Evolution Stage: "+result[i].EvolutionStage+"\r\n");
+                divResult.appendChild(searchContent);
+
+                pic_Above.appendChild(divResult);
+
+                // let pNode = nameCollection[j].parentNode;
+                // let cNode = pNode.childNodes;
+                // return cNode;
+
+                // let siblings = [];
+                // for(k=0;k<cNode.length;k++)
+                // {
+                //     siblings[siblings.length] =  cNode[k];
+                // }
+                // return siblings;
+
+            }
+        }
+    }
+
+
 }
 
 function validTextInput(inputText) {
@@ -124,4 +161,34 @@ function validTextInput(inputText) {
     }
     return true;
 }
+
+// function insert(cNode){
+//     var picAbove = document.getElementById("pic-all");
+
+//     var divResult = document.createElement("div");
+//     for(i=0;i<cNode.length;i++){
+//         divResult.appendChild(cNode[i]);
+//     }
+
+
+    // var liDescribe = document.createElement("li");
+    // var textDescribe = document.createTextNode("describetion of result")//to-do
+
+    // var liImg = document.createElement("img");
+    // liImg.src =" ";//to-do
+
+    // liDescribe.appendChild(textDescribe);
+    // liDescribe.appendChild(liImg);
+    // //divResult -> liDescribe -> textDescribe,liImg
+    // divResult.appendChild(liDescribe);
+
+    // //picAbove ->divResult -> liDescribe -> textDescribe,liImg
+    // var bodyall = document.getElementsByTagName("body");
+    // bodyall.insertBefore(divResult,picAbove);
+
+// }
+
+
+
+
 
