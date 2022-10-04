@@ -74,20 +74,13 @@ function numberSearchClickListener() {
     console.log(result);
 
     // display searching result
-    // let resultDiv = document.getElementById("number-search-result");
-    // resultDiv.innerHTML = "";
-    // for (let i = 0; i < result.length; i++) {
-    //     resultDiv.innerHTML += "Name: " + result[i].name + "\r\n" + " Id: " + result[i].id + result[i].type + "\r\n"+ " Evolution Stage: "+result[i].EvolutionStage ;
-    //     alert(resultDiv.innerHTML);
-    // }
-
-    // display searching result
-
     let numCollection = document.getElementsByClassName("num");
     for(i=0;i<result.length;i++){
         for(j=0;j<numCollection.length;j++){
             if(result[i].id === Number (numCollection[j].textContent)){
-                 var divResult = document.createElement("div");
+                var pic_Above = document.getElementById("picAbove");
+                
+                var divResult = document.createElement("div");
                 var liResult = document.createElement("li");
                 liResult.style.listStyle = "none";
                 var searchContent = document.createTextNode("Name: " + result[i].name + "\r\n" + " Id: " + result[i].id + result[i].type + "\r\n"+ " Evolution Stage: "+result[i].EvolutionStage+"\r\n");
@@ -95,6 +88,8 @@ function numberSearchClickListener() {
                 divResult.appendChild(liResult);
                 pic_Above.appendChild(divResult);
 
+                divResult.style.backgroundColor = "background-color: #4158D0";
+                divResult.style.backgroundImage = "linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)";
                 // let pNode = nameCollection[j].parentNode;
                 // let cNode = pNode.childNodes;
                 // return cNode;
