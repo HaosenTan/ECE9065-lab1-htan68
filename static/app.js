@@ -79,17 +79,29 @@ function numberSearchClickListener() {
         for(j=0;j<numCollection.length;j++){
             if(result[i].id === Number (numCollection[j].textContent)){
                 var pic_Above = document.getElementById("picAbove");
-                
+
                 var divResult = document.createElement("div");
+                var ulResult = document.createElement("ul");
                 var liResult = document.createElement("li");
                 liResult.style.listStyle = "none";
+                ulResult.style.listStyle = "none";
                 var searchContent = document.createTextNode("Name: " + result[i].name + "\r\n" + " Id: " + result[i].id + result[i].type + "\r\n"+ " Evolution Stage: "+result[i].EvolutionStage+"\r\n");
+
+                var imgResult = document.createElement("img");
+                imgResult.src = 'static/img/'+result[i].id+'.png';
+                imgResult.style.position = "relative";
+                imgResult.style.width = "50px";
+                imgResult.style.length = "50px";
+                liResult.appendChild(imgResult);
                 liResult.appendChild(searchContent);
-                divResult.appendChild(liResult);
+
+                ulResult.appendChild(liResult);
+                divResult.appendChild(ulResult);
                 pic_Above.appendChild(divResult);
 
                 divResult.style.backgroundColor = "background-color: #4158D0";
                 divResult.style.backgroundImage = "linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)";
+
                 // let pNode = nameCollection[j].parentNode;
                 // let cNode = pNode.childNodes;
                 // return cNode;
@@ -145,20 +157,7 @@ function textSearchClickListener() {
 
     // search for the text in the array
     let result = searchByText(text, Parry);
-
-
     // display searching result
-    // let resultDiv = document.getElementById("text-search-result");
-    // resultDiv.innerHTML = "";
-    // for (let i = 0; i < result.length; i++) {
-    //     resultDiv.innerHTML += "Name: " + result[i].name + "\r\n" + " Id: " + result[i].id + result[i].type + "\r\n"+ " Evolution Stage: "+result[i].EvolutionStage+"\r\n";
-
-    // }
-    // alert(resultDiv.innerHTML);
-
-    // display searching result
-
-
     let nameCollection = document.getElementsByClassName("name");
     for(i=0;i<result.length;i++){
         for(j=0;j<nameCollection.length;j++){
@@ -166,11 +165,22 @@ function textSearchClickListener() {
                 var pic_Above = document.getElementById("picAbove");
 
                 var divResult = document.createElement("div");
+                var ulResult = document.createElement("ul");
                 var liResult = document.createElement("li");
                 liResult.style.listStyle = "none";
+                ulResult.style.listStyle = "none";
                 var searchContent = document.createTextNode("Name: " + result[i].name + "\r\n" + " Id: " + result[i].id + result[i].type + "\r\n"+ " Evolution Stage: "+result[i].EvolutionStage+"\r\n");
+
+                var imgResult = document.createElement("img");
+                imgResult.src = 'static/img/'+result[i].id+'.png';
+                imgResult.style.position = "relative";
+                imgResult.style.width = "50px";
+                imgResult.style.length = "50px";
+                liResult.appendChild(imgResult);
                 liResult.appendChild(searchContent);
-                divResult.appendChild(liResult);
+
+                ulResult.appendChild(liResult);
+                divResult.appendChild(ulResult);
                 pic_Above.appendChild(divResult);
 
                 divResult.style.backgroundColor = "background-color: #4158D0";
@@ -195,9 +205,8 @@ function textSearchClickListener() {
 }
 
 function validTextInput(inputText) {
-   var reg =/^[A-Za-z]{1,20}$/;   //[^[A-Za-z]+$]{1,20}/;
+   var reg =/^[A-Za-z]{0,20}$/;   //[^[A-Za-z]+$]{1,20}/;
     if (inputText === "") {
-        alert("Input cannot be empty");
         return false;
     }
     if(reg.test(inputText)){
