@@ -92,8 +92,8 @@ function numberSearchClickListener() {
                 var imgResult = document.createElement("img");
                 imgResult.src = 'static/img/'+result[i].id+'.png';
                 imgResult.style.position = "relative";
-                imgResult.style.width = "50px";
-                imgResult.style.length = "50px";
+                imgResult.style.width = "45px";
+                imgResult.style.length = "45px";
                 liResult.appendChild(imgResult);
                 liResult.appendChild(searchContent);
 
@@ -176,8 +176,8 @@ function textSearchClickListener() {
                 var imgResult = document.createElement("img");
                 imgResult.src = 'static/img/'+result[i].id+'.png';
                 imgResult.style.position = "relative";
-                imgResult.style.width = "50px";
-                imgResult.style.length = "50px";
+                imgResult.style.width = "45px";
+                imgResult.style.length = "45px";
                 liResult.appendChild(imgResult);
                 liResult.appendChild(searchContent);
 
@@ -187,17 +187,6 @@ function textSearchClickListener() {
 
                 divResult.style.backgroundColor = "background-color: #4158D0";
                 divResult.style.backgroundImage = "linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)";
-
-                // let pNode = nameCollection[j].parentNode;
-                // let cNode = pNode.childNodes;
-                // return cNode;
-
-                // let siblings = [];
-                // for(k=0;k<cNode.length;k++)
-                // {
-                //     siblings[siblings.length] =  cNode[k];
-                // }
-                // return siblings;
 
             }
         }
@@ -220,32 +209,6 @@ function validTextInput(inputText) {
     }
     return true;
 }
-
-// function insert(cNode){
-//     var picAbove = document.getElementById("pic-all");
-
-//     var divResult = document.createElement("div");
-//     for(i=0;i<cNode.length;i++){
-//         divResult.appendChild(cNode[i]);
-//     }
-
-
-    // var liDescribe = document.createElement("li");
-    // var textDescribe = document.createTextNode("describetion of result")//to-do
-
-    // var liImg = document.createElement("img");
-    // liImg.src =" ";//to-do
-
-    // liDescribe.appendChild(textDescribe);
-    // liDescribe.appendChild(liImg);
-    // //divResult -> liDescribe -> textDescribe,liImg
-    // divResult.appendChild(liDescribe);
-
-    // //picAbove ->divResult -> liDescribe -> textDescribe,liImg
-    // var bodyall = document.getElementsByTagName("body");
-    // bodyall.insertBefore(divResult,picAbove);
-
-// }
 
 
 
