@@ -33,6 +33,8 @@ function validNumberInput(inputNumber) {
     var reg =/^(?:[1-9]|1[0-9]|20)$/;
     if(reg.test(inputNumber)){
         return true;
+    }else if(inputNumber === ''){
+        return true;
     }else{
         alert("Please enter a number from 1 to 20");
         return false;
