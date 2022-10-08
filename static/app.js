@@ -104,17 +104,6 @@ function numberSearchClickListener() {
                 divResult.style.backgroundColor = "background-color: #4158D0";
                 divResult.style.backgroundImage = "linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)";
 
-                // let pNode = nameCollection[j].parentNode;
-                // let cNode = pNode.childNodes;
-                // return cNode;
-
-                // let siblings = [];
-                // for(k=0;k<cNode.length;k++)
-                // {
-                //     siblings[siblings.length] =  cNode[k];
-                // }
-                // return siblings;
-
             }
         }
     }

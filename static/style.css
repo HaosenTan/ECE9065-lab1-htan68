@@ -22,15 +22,12 @@ ul {
 .description {
     padding-top: 5px;
     padding-bottom:5px;
-    /* padding-left: 0.5px;
-    padding-left: 0.5px; */
     margin-top: 0;
     margin-bottom: 0;
     margin-left: -0px;
     margin-right: -0px;
     font-size: 90%;
     display: block;
-    /* float: left; */
     position: relative;
     top: -5px;
     margin: 1% 30px;
@@ -108,7 +105,7 @@ input,button {
     width: 40px;
     cursor: pointer;
     position: absolute;
-    background: #e22c32;
+    background: #e22c31;
     border-radius: 0 20px 20px 0;
     width: 250px;
     right: 0;
@@ -131,7 +128,7 @@ input,button {
     width: 40px;
     cursor: pointer;
     position: absolute;
-    background: #e22c32;
+    background: #e22c31;
     border-radius: 0 20px 20px 0;
     width: 250px;
     right: 0;
