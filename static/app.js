@@ -101,8 +101,9 @@ function numberSearchClickListener() {
                 divResult.appendChild(ulResult);
                 pic_Above.appendChild(divResult);
 
-                divResult.style.backgroundColor = "background-color: #4158D0";
-                divResult.style.backgroundImage = "linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)";
+                divResult.style.backgroundColor = "background-color: #00DBDE";
+                divResult.style.backgroundImage = "linear-gradient(216deg, #00DBDE 0%, #FC00FF 100%)";
+
 
             }
         }
